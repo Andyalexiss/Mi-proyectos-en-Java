@@ -1,1 +1,65 @@
+Proyecto 1 
+public class CalculadoraViaje {
+    /* Proyecto #1 Calculadora de Gastos de Viaje
+    Autor: Andy Alexis Cabrera Torres
+    Fecha: 31/05/2025
+    Descripción: Este es un pequeño programa en donde aplico conocimientos basicos de variables para diseñar
+    una calculadora de presupuesto para un viaje. (Este es un programa con datos ya definidios, mas adelante
+    hare un programa en donde el usuario pueda interactuar)
+     */
+    public static void main(String[]args){
+        //Declaración de variables
+        //Destino y moneda
+        String nombreDestino = "Roma, Italia" ;
+        String moneda ="EUR";
+//Presupuesto inicial
+        double presupuestoViaje = 1500.00;
+//Costos de viaje
+        double costoVuelo = 480.75;
+        double costoTren = 50.25;
+//Costos de alojamiento
+        double costoAlojaminetoPorNoche = 85.50;
+        int numerodeNoches = 7;
+//Costos de comida
+        double comidaDiaria = 35.00;
+        //Gastos extras (Actividades, articulos, etc)
+        double Gastosextra = 100.00;
+
+        //Calculos para definir gastos
+        //Costo viajes
+        double costoTotalenViajes = costoVuelo + costoTren;
+        //Costo alojamiento
+        double costoTotalAlojamiento = costoAlojaminetoPorNoche * numerodeNoches;
+
+        //Costo de comida
+        double costoTotalComida = comidaDiaria * numerodeNoches;
+
+        //Suma de gastos
+        double gastoTotalViaje = costoTotalComida + costoTotalAlojamiento + costoTotalenViajes;
+        //Calcular dinero restante
+        double dineroRestante = presupuestoViaje - gastoTotalViaje;
+
+        //Impresion de datos iniciales
+        //Impresion del destino
+        System.out.println("El destino a viajar es: " + nombreDestino);
+        //Impresion de moneda del lugar
+        System.out.println("La moneda del destino es: " + moneda);
+        //Impresion del presupuesto para el viaje
+        System.out.println("Tu presupuesto inicial es: " + presupuestoViaje);
+
+        //Imprimir gastos
+        System.out.println("------------------------------------------------------------");
+        System.out.println("Los gastos en trasporte son: " + costoTotalenViajes);
+        System.out.println("Los gastos en alojamiento son: " + costoTotalAlojamiento);
+        System.out.println("Los gastos en comida son: " + costoTotalComida);
+        System.out.println("El gasto total del viaje es:" + gastoTotalViaje);
+        System.out.println("------------------------------------------------------------");
+//Imprimir dinero restante
+        System.out.println("Tu dinero restante es: " + dineroRestante);
+//Imprimir despedida
+        System.out.println("------------------------------------------------------------");
+        System.out.println("Tu dinero es suficiente para tu viaje. ¡Disfrutalo al maximo!");
+        System.out.println("------------------------------------------------------------");
+    }
+}
 
